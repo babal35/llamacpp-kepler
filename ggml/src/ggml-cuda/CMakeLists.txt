@@ -27,6 +27,11 @@ if (CUDAToolkit_FOUND)
             set(CMAKE_CUDA_ARCHITECTURES "native")
         else()
             if (CUDAToolkit_VERSION VERSION_LESS "13")
+                # 35 == Tesla K40/K20 (Kepler GK110), 37 == Tesla K80 (Kepler GK210)
+                # Both are last supported in CUDA 11.x
+                if (CUDAToolkit_VERSION VERSION_LESS "12")
+                    list(APPEND CMAKE_CUDA_ARCHITECTURES 35-virtual 37-virtual)
+                endif()
                 list(APPEND CMAKE_CUDA_ARCHITECTURES 50-virtual 61-virtual 70-virtual)
             endif ()
 
