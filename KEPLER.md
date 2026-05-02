@@ -158,8 +158,8 @@ All tests run on a single Tesla K80 card (**2×GK210**, 2×11441 MiB = 22882 MiB
 
 | Model | Quant | VRAM used | Prompt t/s | Gen t/s |
 |---|---|---|---|---|
-| [GPT-OSS-20B MoE](https://huggingface.co/collections/microsoft/phi-4-677b5ade6bc4cbcf92e24d79) (mxfp4 GGUF) | mxfp4 | ~22 GB (2×K80) | ~28 | ~25 |
-| [Gemma4 26B A4B](https://huggingface.co/google/gemma-3-27b) (MoE) | Q4_K_M | ~22 GB (2×K80) | ~22 | ~20 |
+| [GPT-OSS-20B MoE](https://huggingface.co/ggml-org/gpt-oss-20b-GGUF/blob/main/gpt-oss-20b-mxfp4.gguf) (mxfp4 GGUF) | mxfp4 | ~16 GB (2×K80) | ~28 | ~25 |
+| [Gemma4 26B A4B](https://huggingface.co/ggml-org/gemma-4-26B-A4B-it-GGUF/blob/main/gemma-4-26B-A4B-it-Q4_K_M.gguf) (MoE) | Q4_K_M | ~20 GB (2×K80) | ~22 | ~20 |
 
 > Both models fit entirely on the two K80 GPUs with no CPU offload. Tokens/s measured with a warm context, 512 token generation.
 
