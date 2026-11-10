@@ -65,7 +65,7 @@ Restricts BF16 cuBLAS `GemmEx` to Ampere and newer. Without this fix, any GGUF m
   | GPU | Chip | Compute | Status |
   |---|---|---|---|
   | Tesla K80 | GK210 | sm_37 | ✅ tested |
-  | Tesla K40 | GK110B | sm_35 | ⚠️ compiled, not tested |
+  | Tesla K40m | GK110B | sm_35 | ✅ tested |
   | Tesla K20 | GK110 | sm_35 | ⚠️ compiled, not tested |
   | GTX 780 Ti | GK110 | sm_35 | ⚠️ compiled, not tested |
 - **CUDA Toolkit 11.x** (11.0–11.8) — Kepler is **not** supported in CUDA 12+
